@@ -1,7 +1,7 @@
 import {Express, Request, Response} from "express";
 
 function routes(app: Express) {
-  app.get('/health-check', (req: Request, res: Response) => {
+  app.get('/health-check', (_: Request, res: Response) => {
     return res.send('healthy');
   })
 }
