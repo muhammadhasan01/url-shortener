@@ -7,7 +7,7 @@ function routes(app: Express) {
     return res.send('healthy');
   })
 
-  app.post('/shortener', bodyParser.json(), createShortUrl)
+  app.post('/shortener', createShortUrl)
 }
 
 
