@@ -18,3 +18,8 @@ export const handleRedirect = async (req: Request, res: Response) => {
   const {destination} = resource;
   return res.redirect(destination);
 }
+
+export const getAnalytics = async (_: Request, res: Response) => {
+  const data = await analytics.find().lean();
+  return res.send(data);
+}
