@@ -8,7 +8,7 @@ function routes(app: Express) {
     return res.send("healthy");
   })
 
-  app.post("/url-shortener", validateResource(shortUrlSchema), createShortUrl);
+  app.post("/api/url-shortener", validateResource(shortUrlSchema), createShortUrl);
   app.get("/:shortId", handleRedirect);
   app.get("/api/analytics", getAnalytics);
 }
