@@ -1,5 +1,6 @@
 import {Request, Response} from 'express';
 import shortUrl from "../models/shortUrl.model";
+import analytics from "../models/analytics.model";
 
 export const createShortUrl = async (req: Request, res: Response) => {
   const {destination} = req.body;
@@ -13,6 +14,7 @@ export const handleRedirect = async (req: Request, res: Response) => {
   if (!resource) {
     return res.sendStatus(404);
   }
+  await analytics.create({ shortUrl: resource._id })
   const {destination} = resource;
   return res.redirect(destination);
 }
