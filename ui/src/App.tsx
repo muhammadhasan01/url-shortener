@@ -1,7 +1,9 @@
+import URLShortenerForm from "./components/URLShortenerForm";
+
 function App() {
   return (
     <div className="App">
-      Zoom
+      <URLShortenerForm />
     </div>
   );
 }
