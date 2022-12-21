@@ -20,7 +20,7 @@ const URLShortenerForm = () => {
     setShortUrl(result)
   }
 
-  return <Box pos="relative">
+  return <Box pos="relative" zIndex="2" backgroundColor="gray">
     <form onSubmit={handleSubmit}>
       <Input
         onChange={(e: any) => setDestination(e.target.value)}
