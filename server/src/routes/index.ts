@@ -3,7 +3,7 @@ import {createShortUrl, getAnalytics, handleRedirect} from "../controller/shortU
 import validateResource from '../middleware/validateResource';
 import shortUrlSchema from '../schemas/createShortUrl.schema';
 
-function routes(app: Express) {
+const routes = (app: Express) => {
   app.get("/health-check", (_: Request, res: Response) => {
     return res.send("healthy");
   })
