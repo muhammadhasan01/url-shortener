@@ -4,7 +4,6 @@ import {useEffect, useState} from "react";
 const Background = () => {
   const {width, height} = useWindowDimensions();
   const img = `https://picsum.photos/seed/picsum/${width}/${height}`;
-  console.log({img})
   return (
     <Image
       position="fixed"
