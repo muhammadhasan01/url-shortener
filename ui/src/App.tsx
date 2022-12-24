@@ -1,19 +1,17 @@
-import URLShortenerForm from "./components/URLShortenerForm";
-import Background from "./components/Background";
-import {Box} from "@chakra-ui/react";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+
+import Home from "./containers/Home";
+import HandleRedirect from "./containers/HandleRedirect";
 
 function App() {
   return (
-    <Box
-      height="100%"
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-    >
-      <URLShortenerForm/>
-      <Background/>
-    </Box>
-  );
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/redirect" element={<HandleRedirect />}/>
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;
