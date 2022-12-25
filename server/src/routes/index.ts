@@ -1,5 +1,5 @@
 import {Express, Request, Response} from "express";
-import {createShortUrl, getAnalytics, handleRedirect} from "../controller/shortUrl.controller";
+import {createShortUrl, getAnalytics, getDestination, handleRedirect} from "../controller/shortUrl.controller";
 import validateResource from '../middleware/validateResource';
 import shortUrlSchema from '../schemas/createShortUrl.schema';
 
@@ -10,6 +10,7 @@ const routes = (app: Express) => {
 
   app.post("/api/url-shortener", validateResource(shortUrlSchema), createShortUrl);
   app.get("/api/url/:shortId", handleRedirect);
+  app.get("/api/destination/:shortId", getDestination);
   app.get("/api/analytics", getAnalytics);
 }
 
