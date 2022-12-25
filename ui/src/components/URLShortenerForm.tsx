@@ -30,8 +30,8 @@ const URLShortenerForm = () => {
       </InputGroup>
     </form>
     {shortUrl && (
-      <a href={`${SERVER_ENDPOINT}/${shortUrl.shortId}`}>
-        CLICK ME
+      <a href={`/${shortUrl.shortId}`}>
+        {window.location.origin}/{shortUrl.shortId}
       </a>
     )}
   </Box>
