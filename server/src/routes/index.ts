@@ -9,7 +9,7 @@ const routes = (app: Express) => {
   })
 
   app.post("/api/url-shortener", validateResource(shortUrlSchema), createShortUrl);
-  app.get("api/url/:shortId", handleRedirect);
+  app.get("/api/url/:shortId", handleRedirect);
   app.get("/api/analytics", getAnalytics);
 }
 
