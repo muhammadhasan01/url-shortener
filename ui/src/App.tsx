@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/redirect" element={<HandleRedirect />}/>
+        <Route path="/:shortId" element={<HandleRedirect />}/>
       </Routes>
     </Router>
   )
