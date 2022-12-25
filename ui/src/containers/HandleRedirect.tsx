@@ -10,8 +10,6 @@ const HandleRedirect = () => {
 
   const {shortId} = useParams();
 
-  console.log({shortId});
-
   useEffect(() => {
     const getData = async () => {
       return axios.get(`${SERVER_ENDPOINT}/api/destination/${shortId}`)
