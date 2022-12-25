@@ -17,8 +17,9 @@ const URLShortenerForm = () => {
     e.preventDefault();
     const result = await axios.post(`${SERVER_ENDPOINT}/api/url-shortener`, {
       destination
-    }).then(res => res.data)
-    setShortUrl(result)
+    }).then(res => res.data);
+    setShortUrl(result);
+    setCopied(false);
   }
 
   return <Box pos="relative" zIndex="2" backgroundColor="white">
