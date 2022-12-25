@@ -9,7 +9,7 @@ const schema = new mongoose.Schema({
   "shortUrl": {
     "type": mongoose.Schema.Types.ObjectId,
     "ref": "shortUrl",
-    required: true
+    "required": true
   }
 }, {timestamps: true});
 
