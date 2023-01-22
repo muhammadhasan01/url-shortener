@@ -11,7 +11,7 @@
 > A Fullstack URL Shortener application ✨
 
 ## Technologies Used
-- [Discord API](https://discord.com/developers)
+
 - [MongoDB](https://www.mongodb.com/)
 - [ExpressJs](https://expressjs.com/)
 - [React](https://reactjs.org/)
